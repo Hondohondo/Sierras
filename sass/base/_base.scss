@@ -14,3 +14,48 @@ html {
 body {
     box-sizing: border-box;
 }
+
+
+/**********
+* MEDIA QUERIES for blog sierra
+**********/
+
+@media only screen and (max-width: 1024px) {
+    .issue__container {
+        padding: 0 3%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* HEADER */
+
+    .issue {
+        padding: 4rem 0;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    /* HEADER */
+
+    .issue__circle {
+        display: none;
+    }
+    .issue__title {
+        font-size: 1.5rem;
+    }
+    .item-box p {
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+    .item-box:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+   
+
+}

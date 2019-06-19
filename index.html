@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="MY Experiences at the Sierra during the summer of 2019 with Three Corner Round.">
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>Natours | Exciting tours for adventurous people</title>
+        <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png"> -->
+     
         <title>The Sierras | Five Days and Nights</title>
     </head>
     <body>
@@ -23,12 +24,12 @@
                 <h1 class="heading-primary">
                     <span class="heading-primary--main">
                         <!-- Amiamigo -->
-                        Sierras
+                        In Sierra
                         <!-- Outdoors -->
                     </span>
                     <span class="heading-primary--sub">
                         <!-- front-end developer -->
-                        My 5 Days and Nights
+                        Five Days and Nights
                         <!-- is where life happens -->
                     </span>
                 </h1>
@@ -38,7 +39,160 @@
 
             
         </header>
+
+
+
+    <main>
+
+        <section class="issue">
+            <div class="issue__container">
+
+                <h2 class="issue__title">
+                    <!-- <span class="issue__circle">1</span> -->
+                    <span class="issue__open">Day 1 &ndash; June 12th, 2019</span>
+                </h2>
+                <div class="issue__content">
+                    <div class="item-box">
+                        <!-- <a class="item-link" href="#">The Onion<i class="ion-ios-arrow-thin-right"></i></a> -->
+                        <span class="item-link">The Onion</span>
+                        <p>
+                            Shows you how jQuery can more and more be replaced with simple, vanilla JavaScript. Back in the day jQuery was extremely helpful, but JavaScript has been catching up. Even if you don't use jQuery, this resource is handy to check out how some common tasks
+                            are done in JavaScript.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="issue">
+            <div class="issue__container">
+                <h2 class="issue__title">
+                    <!-- <span class="issue__circle">2</span> -->
+                    <span class="issue__open">Day 2 &ndash; June 13th, 2019</span>
+                </h2>
+                <div class="issue__content">
+                    <div class="item-box">
+                        <!-- <a class="item-link" href="#">The Onion<i class="ion-ios-arrow-thin-right"></i></a> -->
+                        <span class="item-link">The Onion</span>
+                        <p>
+                            Shows you how jQuery can more and more be replaced with simple, vanilla JavaScript. Back in the day jQuery was extremely helpful, but JavaScript has been catching up. Even if you don't use jQuery, this resource is handy to check out how some common tasks
+                            are done in JavaScript.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="issue">
+            <div class="issue__container">
+                <h2 class="issue__title">
+                    <!-- <span class="issue__circle">3</span> -->
+                    <span class="issue__open">The Onion &ndash; June 14th, 2019</span>
+                </h2>
+                <div class="issue__content">
+                    <div class="item-box">
+                        <!-- <a class="item-link" href="#">The Onion<i class="ion-ios-arrow-thin-right"></i></a> -->
+                        <span class="item-link">The Onion</span>
+                        <p>
+                            Shows you how jQuery can more and more be replaced with simple, vanilla JavaScript. Back in the day jQuery was extremely helpful, but JavaScript has been catching up. Even if you don't use jQuery, this resource is handy to check out how some common tasks
+                            are done in JavaScript.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- 
+
+        <section class="issue">
+            <div class="issue__container">
+                <h2 class="issue__title">
+                    <span class="issue__circle">10</span>
+                    <span class="issue__open">Issue 10 &ndash; Will be released July 5th, 2018</span>
+                </h2>
+            </div>
+        </section> -->
+
+        </main>
+
+
+
+    <footer class="master-footer">
+       
+        <div class="container footer__text">
+            <p>Built with <i class="ion-ios-heart"></i> in the city of Los Angeles, CA.</p>
+            <small>&copy; 2019 by Moses Nandi. All rights reserved.</small>
+        </div>
+    </footer>
         
         
     </body>
 </html>
+
+<script type="text/javascript">
+    var elements = document.querySelectorAll('.issue');
+    Array.prototype.forEach.call(elements, function(el, i) {
+        var isOpen = false;
+
+        el.addEventListener('click', function(e) {
+
+            var content = this.querySelector('.issue__content');
+            if (content) {
+                if (isOpen) {
+                    slideUp(content);
+                } else {
+                    slideDown(content);
+                }
+                isOpen = !isOpen;
+            }
+        });
+    });
+
+
+    var links = document.querySelectorAll('.item-link');
+    var linksArr = Array.prototype.slice.call(links);
+    linksArr.forEach(function(x, i) {
+        x.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+
+    /**
+     * Like jQuery's slideDown function - uses CSS3 transitions
+     * @param  {Node} elem Element to show and hide
+     */
+    function slideDown(elem) {
+        elem.style.maxHeight = '2000px';
+        // We're using a timer to set opacity = 0 because setting max-height = 0 doesn't (completely) hide the element.
+        elem.style.opacity = '1';
+        elem.style.paddingTop = '4rem';
+    }
+
+    /**
+     * Slide element up (like jQuery's slideUp)
+     * @param  {Node} elem Element
+     * @return {[type]}      [description]
+     */
+    function slideUp(elem) {
+        elem.style.maxHeight = '0';
+        once(1, function() {
+            elem.style.opacity = '0';
+            elem.style.paddingTop = '0';
+        });
+    }
+
+    /**
+     * Call once after timeout
+     * @param  {Number}   seconds  Number of seconds to wait
+     * @param  {Function} callback Callback function
+     */
+    function once(seconds, callback) {
+        var counter = 0;
+        var time = window.setInterval(function() {
+            counter++;
+            if (counter >= seconds) {
+                callback();
+                window.clearInterval(time);
+            }
+        }, 400);
+    }
+</script>

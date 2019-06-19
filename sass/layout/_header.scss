@@ -1,6 +1,7 @@
 .header {
     position: relative;
-    height: 95vh;
+    // height: 95vh;
+    height: 65vh;
     background-image:linear-gradient(
         to right bottom, 
         rgba($color-primary-light, 0.801), 
@@ -31,4 +32,143 @@
         text-align: center;
     }
 
+}
+
+/*** COLOR PALETTE - for Sierra blog
+* Main blue:     #26AFEB
+* Dark grey:     #38464D
+* Light grey:    #F9FAFA
+* Accent orange: #FF951F
+***/
+
+
+/**********
+* NEWSLETTER
+**********/
+
+.issue {
+    padding: 7rem 0;
+    cursor: pointer;
+}
+
+.issue:hover .issue__open {
+    border-bottom: 1px solid #38464D;
+    transform: translateX(3px);
+}
+
+.issue:nth-child(odd) {
+    background-color: #F9FAFA;
+}
+
+.issue__title {
+    font-size: 1.7rem;
+}
+
+.issue__open {
+    display: inline-block;
+    border: none;
+    background: none;
+    outline: none;
+    padding-bottom: 3px;
+    transition: all .2s;
+}
+
+.issue__circle {
+    display: inline-block;
+    background-color: #FF951F;
+    color: #fff;
+    height: 5rem;
+    width: 5rem;
+    padding-top: 1rem;
+    font-size: 2.3rem;
+    font-weight: 400;
+    border-radius: 50%;
+    margin-right: 2rem;
+    transform: translateY(3px);
+    text-align: center;
+}
+
+.issue__container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.issue__content {
+    /*padding-top: 4rem;*/
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 1.0s;
+}
+
+.item-box:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.item-box p {
+    font-size: 1.7rem;
+    line-height: 1.6;
+}
+
+
+.item-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    color: #26AFEB;
+    text-decoration: none;
+    border-bottom: 1px solid #26AFEB;
+    transition: color 0.2s, border-bottom 0.2s;
+    padding-bottom: 2px;
+}
+
+// .item-link:link,
+// .item-link:visited {
+//     display: inline-block;
+//     margin-bottom: 1rem;
+//     font-size: 1.7rem;
+//     color: #26AFEB;
+//     text-decoration: none;
+//     border-bottom: 1px solid #26AFEB;
+//     transition: color 0.2s, border-bottom 0.2s;
+//     padding-bottom: 2px;
+// }
+
+// .item-link:hover,
+// .item-link:active {
+//     color: #FF951F;
+//     border-bottom: 1px solid #FF951F;
+// }
+
+// .item-link i {
+//     font-size: 2.5rem;
+//     margin-left: 7px;
+//     line-height: 1;
+//     display: inline-block;
+//     vertical-align: middle;
+//     margin-top: -4px;
+// }
+
+/**********
+* FOOTER
+**********/
+
+footer {
+    padding: 5rem 0;
+}
+
+.footer__text {
+    margin-top: 3rem;
+}
+
+.footer__text>* {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.ion-ios-heart {
+    color: #ff3030;
+    margin: 0 2px;
 }
