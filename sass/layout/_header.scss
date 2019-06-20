@@ -1,14 +1,20 @@
 .header {
     position: relative;
     // height: 95vh;
-    height: 65vh;
+    height: 70vh;
+    //background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hero1.jpg);
     background-image:linear-gradient(
         to right bottom, 
         rgba($color-primary-light, 0.801), 
         rgba($color-primary-dark, 0.801)),
-    url(../img/hero.jpg);
+    url(../img/hero1.jpg);
+    // background-image: linear-gradient(to right bottom, #2998ff, #5643fa),url(../img/hero1.jpg);
+    //background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.829), rgba(85, 67, 250, 0.829)),url(../img/hero1.jpg);
+    // background-image: url(../img/hero1.jpg);
     background-size: cover;
-    background-position: top;
+    // background-position: top;
+    background-position: center;
+    // background-blend-mode: screen;
 
     &__logo-box {
         position: absolute;
