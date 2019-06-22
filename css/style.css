@@ -143,7 +143,7 @@ body {
 .header {
   position: relative;
   height: 70vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(40, 180, 133, 0.801)), url(../img/hero1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(0, 0, 0, 0.801)), url(../img/hero1.jpg);
   background-size: cover;
   background-position: center;
   /* .logo:hover {
@@ -253,3 +253,13 @@ footer {
 .ion-ios-heart {
   color: #ff3030;
   margin: 0 2px; }
+
+.contaner {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px); }
+
+.contaner > div > img {
+  width: 100%;
+  object-fit: cover; }
