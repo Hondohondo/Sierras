@@ -208,7 +208,7 @@ body {
   text-align: center; }
 
 .issue__container {
-  max-width: 80rem;
+  max-width: 120rem;
   margin: 0 auto; }
 
 .issue__content {
@@ -217,6 +217,10 @@ body {
   opacity: 0;
   overflow: hidden;
   transition: all 1.0s; }
+
+.item-box {
+  max-width: 100rem;
+  margin: 0 auto; }
 
 .item-box:not(:last-child) {
   margin-bottom: 4rem; }

@@ -95,7 +95,8 @@
 }
 
 .issue__container {
-    max-width: 80rem;
+    max-width: 120rem;
+    // max-width: 80rem;
     margin: 0 auto;
 }
 
@@ -105,6 +106,11 @@
     opacity: 0;
     overflow: hidden;
     transition: all 1.0s;
+}
+
+.item-box {
+    max-width: 100rem;
+    margin: 0 auto;
 }
 
 .item-box:not(:last-child) {
@@ -204,7 +210,8 @@ footer {
 //     grid-template-rows: repeat(2, 100px);  
 // }
 
-.contaner {  
+.contaner {
+    // width: 100rem!important;  
     display: grid;  
     grid-gap: 5px;  
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
