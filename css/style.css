@@ -258,12 +258,20 @@ footer {
   color: #ff3030;
   margin: 0 2px; }
 
-.contaner {
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-template-rows: repeat(2, 100px); }
-
 .contaner > div > img {
   width: 100%;
-  object-fit: cover; }
+  height: auto; }
+
+.contaner div {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%; }
+
+@media only screen and (max-width: 900px) {
+  .contaner div {
+    width: 49.99999%;
+    margin: 6px 0; } }
+
+@media only screen and (max-width: 600px) {
+  .contaner div {
+    width: 100%; } }
