@@ -143,7 +143,7 @@ body {
 .header {
   position: relative;
   height: 70vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(0, 0, 0, 0.801)), url(../img/hero1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.801), rgba(0, 0, 0, 0.801)), url(../img/hero1.JPG);
   background-size: cover;
   background-position: center;
   /* .logo:hover {
